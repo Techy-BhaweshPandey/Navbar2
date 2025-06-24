@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navbar with Dark/Light Mode & Hamburger</title>
+  <link rel="stylesheet" href="Navbar2.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="logo">Logo</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li>
+    <button id="modeToggle" class="mode-toggle">🌙</button>
+  </li>
+    </ul>
+
+    <!-- Hamburger only for mobile -->
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- Color picker below navbar -->
+  <div class="color-picker-container">
+    <label for="navbarColor">Pick Navbar Color:</label>
+    <input type="color" id="navbarColor" aria-label="Navbar background color picker" value="#1E293B" />
+  </div>
+
+  <div class="view-code-btn">
+    <a href="https://github.com/your-username/navbar-step2" target="_blank" rel="noopener noreferrer">
+      🔗 View Full Code on GitHub
+    </a>
+  </div>
+
+<script src="Navbar2.js">
+ 
+</script>
+
+</body>
+</html>

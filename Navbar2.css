@@ -1,0 +1,238 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  color: #f9fafb;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+
+nav.navbar {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #1E293B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  height: 50px; 
+}
+
+.logo img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo span {
+  line-height: 1;
+}
+
+nav ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  align-items: center;
+  transition: max-height 0.4s ease;
+}
+
+nav ul.nav-links li a {
+  color: #f9fafb;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul.nav-links li a:hover {
+  color: #ff7f50;
+}
+
+.mode-toggle {
+  cursor: pointer;
+ background: transparent;
+  color: #f9fafb;
+  border: none;
+  font-size: 2rem;          
+  padding: 10px 16px;       
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  user-select: none;
+  box-shadow: none;
+}
+
+
+.mode-toggle:hover {
+  color: #ff7f50;
+  background: transparent;
+  box-shadow: none;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  margin-left: 20px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.hamburger div {
+  width: 28px;
+  height: 4px;
+  background: #f9fafb;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+
+.hamburger:hover {
+  background-color: rgba(255, 127, 80, 0.15);
+}
+
+
+body.dark-mode .hamburger div {
+  background: #ddd;
+}
+
+body.dark-mode .hamburger:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+    
+  }
+
+ /* Give spacing below other menu items */
+.nav-links li:last-child {
+  margin-top: 10px;
+}
+
+  nav ul.nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #1E293B;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    border-radius: 0 0 8px 8px;
+    z-index: 9;
+  }
+
+
+  nav ul.nav-links.active {
+    max-height: 480px;
+  }
+
+
+  nav ul.nav-links li {
+    padding: 18px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+body.dark-mode nav.navbar {
+  background-color: #222;
+  box-shadow: 0 6px 15px rgba(255,255,255,0.1);
+}
+
+body.dark-mode nav ul.nav-links li a {
+  color: #ddd;
+}
+
+body.dark-mode nav ul.nav-links li a:hover {
+  color: #ffab70;
+}
+
+body.dark-mode .mode-toggle {
+  color: #f0f0f0;
+}
+
+
+.color-picker-container {
+  max-width: 1000px;
+  margin: 15px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #f9fafb;
+  font-weight: 700;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.color-picker-container label {
+  user-select: none;
+}
+
+
+.view-code-btn {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.view-code-btn a {
+  text-decoration: none;
+  background-color: #1E293B;
+  color: #f9fafb;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+  display: inline-block;
+}
+
+.view-code-btn a:hover {
+  background-color: #ff7f50;
+  box-shadow: 0 7px 18px rgba(255,127,80,0.7);
+}
